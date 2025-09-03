@@ -5,7 +5,10 @@
   };
 
   outputs =
-    { nixpkgs }:
+    { self
+    , nixpkgs
+    , ...
+    }:
     let
       systems = [
         "x86_64-linux"

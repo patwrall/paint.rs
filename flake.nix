@@ -1,12 +1,11 @@
 {
-  description = "Paint.rs";
+  description = "paint-rs";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
   };
 
   outputs =
-    { self
-    , nixpkgs
+    { nixpkgs
     , ...
     }:
     let

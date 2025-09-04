@@ -1,5 +1,23 @@
-[package]
-name = "paint-rs"
+[workspace]
+members = ["crates/cmd", "crates/core"]
+
+resolver = "3"
+
+[workspace.package]
 version = "0.0.1"
-license = "MIT"
 edition = "2024"
+
+[profile.dev]
+incremental = true
+
+[profile.release]
+codegen-units = 1
+lto = true
+overflow-checks = false
+
+[workspace.dependencies]
+relm4 = { version = "0.10.0", features = [] }
+relm4-components = "0.10.0"
+gtk = { package = "gtk4", version = "0.10.0", features = ["v4_20"] }
+
+anyhow = "1.0.99"

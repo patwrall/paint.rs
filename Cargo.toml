@@ -18,6 +18,6 @@ overflow-checks = false
 [workspace.dependencies]
 relm4 = { version = "0.10.0", features = [] }
 relm4-components = "0.10.0"
-gtk = { package = "gtk4", version = "0.10.0", features = ["v4_20"] }
+gtk = { package = "gtk4", version = "0.10.0", features = ["v4_18"] }
 
 anyhow = "1.0.99"

@@ -4,3 +4,8 @@ version.workspace = true
 edition.workspace = true
 
 [dependencies]
+gtk.workspace = true
+relm4.workspace = true
+relm4-components.workspace = true
+
+anyhow.workspace = true

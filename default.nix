@@ -1,4 +1,7 @@
 { rustPlatform
+, pkg-config
+, gtk4
+, ...
 }:
 rustPlatform.buildRustPackage {
   pname = "paint.rs";
@@ -6,4 +9,7 @@ rustPlatform.buildRustPackage {
 
   src = ./.;
   cargoLock.lockFile = ./Cargo.lock;
+
+  nativeBuildInputs = [ pkg-config ];
+  buildInputs = [ gtk4 ];
 }

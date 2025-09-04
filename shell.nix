@@ -3,7 +3,9 @@
 , rustfmt
 , clippy
 , cargo
-,
+, pkg-config
+, gtk4
+, ...
 }:
 let
   mainPkg = callPackage ./default.nix { };
@@ -15,6 +17,9 @@ mainPkg.overrideAttrs (oa: {
     rustfmt
     clippy
     cargo
+
+    pkg-config
+    gtk4
   ]
   ++ (oa.nativeBuildInputs or [ ]);
 })
